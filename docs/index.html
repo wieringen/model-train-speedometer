@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Model Train Speedometer</title>
+
+        <meta charset="utf-8">
+        <meta name="robots" content="all" />
+        <meta name="resource-type" content="document" />
+        <meta name="description" content="Tiny Carousel is a lightweight jQuery carousel for sliding html based content." />
+        <meta name="keywords" content="lightweight, jQuery, plugin, carousel, javascript, tinycarousel, Tiny Carousel, web 2.0" />
+        <meta name="author" content="Maarten baijs" />
+        <meta name="copyright" content="" />
+
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../node_modules/baijs/css/website.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="css/tinycarousel.css" type="text/css" media="screen"/>
+
+        <!--[if lte IE 8]>
+            <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <!--[if lte IE 7]>
+            <link rel="stylesheet" href="../node_modules/baijs/css/website_ie.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if lte IE 5]>
+            <script type="text/javascript"> function handleError() { return true; } window.onerror = handleError; </script>
+        <![endif]-->
+
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+        <!-- Add tinycarousel JS -->
+        <script type="text/javascript" src="js/jquery.tinycarousel.js"></script>
+
+        <!-- Next files are only for this website! -->
+        <script type="text/javascript" src="../node_modules/baijs/js/prettify.js"></script>
+        <script type="text/javascript" src="../node_modules/baijs/js/website.js"></script>
+        <script type="text/javascript">window.google_analytics_uacct = "UA-4459599-4";</script>
+    </head>
+
+    <body>
+
+    <div id="wrapper">
+
+        <header id="header">
+            <h1>Model Train Speedometer</h1>
+            <span class="slogan">A Arduino based project that measures and displays a model train's scaled speed.</span>
+
+            <a href="tinycarousel-@@bnr@@.zip" class="btn-download">Download v@@bnr@@</a>
+        </header>
+
+        <nav id="menu-primary" class="menu">
+            <ul class="block-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="../tinycarousel">Tiny Carousel</a></li>
+                <li><a href="../tinyscrollbar">Tiny Scrollbar</a></li>
+                <li><a href="../tinycircleslider">Tiny Circleslider</a></li>
+                <li><a href="../tinycolorpicker">Tiny Colorpicker</a></li>
+            </ul>
+
+            <select>
+                <option value="" selected="selected">Go to..</option>
+                <option value="/">Home</option>
+                <option value="../tinycarousel">Tiny Carousel</option>
+                <option value="../tinyscrollbar">Tiny Scrollbar</option>
+                <option value="../tinycircleslider">Tiny Circleslider</option>
+                <option value="../tinycolorpicker">Tiny Colorpicker</option>
+            </select>
+        </nav>
+
+        <article id="col-main">
+
+            <section class="block">
+                <!-- google_ad_section_start -->
+                <h2>What is it?</h2>
+                <p>Ever wanted to be able to see the real life speed of your model train?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly.</p>
+                <!-- google_ad_section_end -->
+
+                <!-- AddThis Button BEGIN -->
+                <div class="addthis_toolbox addthis_default_style ">
+                    <a class="addthis_button_facebook"></a>
+                    <a class="addthis_button_twitter"></a>
+                    <a class="addthis_button_delicious"></a>
+                </div>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52f90afd62b4f6ee"></script>
+                <!-- AddThis Button END -->
+            </section>
+
+            <!-- google_ad_section_start -->
+            <section class="block">
+                <h2>Features</h2>
+                <ul class="list">
+                    <li>Can display imperial or metric units.</li>
+                    <li>Works with all brands or scales.</li>
+                    <li><a href="https://github.com/wieringen/modeltrain-speedmeter">Source is on GitHub</a></li>
+                </ul>
+            </section>
+            <!-- google_ad_section_end -->
+
+            <section class="block advert">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Responsive -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6364750078473156"
+                     data-ad-slot="7734741654"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+
+            <section class="block">
+                <h2>Demo</h2>
+                <iframe width="458" height="257" src="//www.youtube.com/embed/oRUNwzjgXyA" frameborder="0" allowfullscreen></iframe>
+            </section>
+
+            <section class="block">
+                <h2>Parts</h2>
+                <strong>Receiver</strong>
+                <ul class="list">
+                    <li>ATMEGA328-PU or similar with a arduino bootloader.</li>
+                    <li>RF12B transceiver</li>
+                    <li>16mhz resonator</li>
+                    <li>Diode</li>
+                    <li>LCD with HD44780 or similar controller</li>
+                </ul>
+
+                <strong>Sender</strong>
+                <ul class="list">
+                    <li>ATMEGA328-PU or similar with a arduino bootloader.</li>
+                    <li>RF12B transceiver</li>
+                    <li>2 resistors of 10k</li>
+                    <li>resistor of 0.27k</li>
+                    <li>5 capacitors of 0.1uF</li>
+                    <li>1 capacitor of 10uF</li>
+                    <li>1 capacitor of 470uF</li>
+                    <li>16mhz resonator</li>
+                    <li>7805L</li>
+                    <li>MCP1702-33</li>
+                    <li>Diode</li>
+                    <li>HAL sensor(A1202UA)</li>
+                    <li>Tiny magnet</li>
+                    <li>A train car with enough room inside to hold everything.</li>
+                </ul>
+
+            <section class="block">
+                <h2>Schematics</h2>
+
+                <strong>Receiver</strong>
+                <p><a href="Model train - Speedometer - Receiver.sch">Eagle file</a></p>
+                <p><a href="images/sender.png"><img width="458" src="images/sender.png" /></a></p>
+
+                <strong>Sender</strong>
+                <p><a href="Model train - Speedometer - Sender.sch">Eagle file</a></p>
+                <a href="images/sender.png"><img width="458" src="images/sender.png" /></a>
+
+            </section>
+
+            <section class="block">
+                <h2>Code</h2>
+
+                <p>You will need to install the <a href="http://jeelabs.net/projects/jeelib/wiki">JeeLib</a> library. The schemes below depend on it.</p>
+
+                <strong>Receiver</strong>
+                <p><a href="Receiver.ino">Arduino file</a></p>
+
+                <strong>Sender</strong>
+                <p><a href="Sender.ino">Arduino file</a></p>
+            </section>
+        </article>
+
+        <aside id="col-right">
+
+            <section class="block advert">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6364750078473156" data-ad-slot="6807908455" data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+
+            <section class="block">
+                <h2>License / Source</h2>
+
+                <p>The schemes and diagrams here are free and open source. They are licensed under the MIT license. However a donation for our labor of love is greatly appreciated :) </p>
+                <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="beer">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+                    <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" src="https://www.paypal.com/nl_NL/i/scr/pixel.gif" width="1" height="1" />
+                </form></p>
+                <p>The latest source is available on <a href="https://github.com/wieringen/tinycarousel">GitHub</a>.</p>
+            </section>
+
+            <section class="block">
+                <h2>Other projects</h2>
+
+                <nav id="menu-secondary" class="menu">
+                    <ul class="block-menu">
+                        <li><a href="../model-train-speedometer" class="active">Model Train Speedometer</a></li>
+                    </ul>
+
+                    <select>
+                        <option value="" selected="selected">Go to..</option>
+                        <option value="/">Home</option>
+                        <option value="../model-train-speedometer">Model Train Speedometer</option>
+                    </select>
+                </nav>
+            </section>
+        </aside>
+
+        <footer id="footer">&copy; <a href="/">Maarten Baijs</a> 2009-2014</footer>
+    </div>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4459599-4']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html>
