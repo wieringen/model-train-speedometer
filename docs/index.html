@@ -12,11 +12,11 @@
         <meta name="copyright" content="Maarten baijs" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../node_modules/baijs/css/website.css" type="text/css" media="screen"/>
 
         <!--[if lte IE 8]>
-            <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
         <![endif]-->
 
         <!--[if lte IE 7]>
@@ -28,7 +28,7 @@
         <![endif]-->
 
         <!-- Add jQuery library -->
-        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
         <!-- Next files are only for this website! -->
         <script type="text/javascript" src="../node_modules/baijs/js/prettify.js"></script>
@@ -44,10 +44,10 @@
             <h1>Model Train Speedometer</h1>
             <span class="slogan">A Arduino based project that measures and displays a model train's scaled speed.</span>
 
-            <a href="tinycarousel-@@bnr@@.zip" class="btn-download">Download v@@bnr@@</a>
+            <a href="model-train-speedometer-@@bnr@@.zip" class="btn-download">Download v@@bnr@@</a>
         </header>
 
-        <nav id="menu-primary" class="menu">
+        <nav id="menu">
             <ul class="block-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="../tinycarousel">Tiny Carousel</a></li>
@@ -71,7 +71,7 @@
             <section class="block">
                 <!-- google_ad_section_start -->
                 <h2>What is it?</h2>
-                <p>Ever wanted to be able to see the real life speed of your model train?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly. We used a Märklin H0 model train as a example.</p>
+                <p>Ever wanted to be able to see the real life speed of your model train for free?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly. Together they form a easy to use speedmeter. We used a Märklin H0 model train as a example.</p>
                 <!-- google_ad_section_end -->
 
                 <!-- AddThis Button BEGIN -->
@@ -155,13 +155,12 @@
                 <h2>Schematics</h2>
 
                 <strong>Receiver</strong>
-                <p><a href="Model train - Speedometer - Receiver.sch">Eagle file</a></p>
-                <p><a href="images/receiver.png"><img width="458" src="images/receiver.png" /></a></p>
+                <p><a href="../schematics/receiver.sch">Eagle file</a></p>
+                <p><a href="../schematics/receiver.png"><img width="458" src="../schematics/receiver.png" /></a></p>
 
-                <strong>Sender</strong>
-                <p><a href="Model train - Speedometer - Sender.sch">Eagle file</a></p>
-                <a href="images/sender.png"><img width="458" src="images/sender.png" /></a>
-
+                <strong>Sender</strong>x
+                <p><a href="../schematics/sender.sch">Eagle file</a></p>
+                <a href="../schematics/sender.png"><img width="458" src="../schematics/sender.png" /></a>
             </section>
 
             <section class="block advert">
@@ -190,13 +189,21 @@
 
                 <p>Now you can open the examples below in your <a href="http://arduino.cc/en/main/software#toc1">Arduino IDE</a>.</p>
 
-                <strong>Receiver</strong>
-                <p><a href="Receiver.ino">Arduino file</a></p>
+                <strong>Receiver scheme</strong>
+                <p><a href="../schemes/Receiver/Receiver.ino">Arduino file</a></p>
 
-                <strong>Sender</strong>
-                <p><a href="Sender.ino">Arduino file</a></p>
+                <strong>Sender scheme</strong>
+                <p><a href="../schemes/Sender/Sender.ino">Arduino file</a></p>
 
                 <p>Currently the code is setup to work with Marklin H0 as a default. If you want to make this work with your brand or scale you will need to edit the Sender.ino file in 2 locations. In the top of this file you see 2 constants defined as MODEL_SCALE_MM and WHEEL_DIAMETER_MM. The first constant is the scale of your model and the second is the diamater of the wheel. Change these values to reflect your model.</p>
+
+                <pre class="prettyprint"><code>
+// Currently set to Marklin H0 scale 1=87.
+//
+const float MODEL_SCALE_MM = 87;
+const float WHEEL_DIAMETER_MM = 11.9;
+                </code></pre>
+
             </section>
         </article>
 
@@ -220,6 +227,7 @@
                     <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" src="https://www.paypal.com/nl_NL/i/scr/pixel.gif" width="1" height="1" />
                 </form></p>
+                <p>The latest source is available on <a href="https://github.com/wieringen/model-train-speedometer">GitHub</a>.</p>
             </section>
 
             <section class="block">
