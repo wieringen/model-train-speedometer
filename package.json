@@ -1,18 +1,16 @@
 {
   "name": "model-train-speedometer",
   "version": "0.0.5",
-  "description": "A lightweight cross browser jQuery based scrollbar.",
-  "homepage": "http://www.baijs.com/tinycarousel",
+  "description": "A Arduino based model train speed meter.",
+  "homepage": "https://baijs.com/model-train-speedometer",
   "repository": {
     "type": "git",
     "url": "https://github.com/wieringen/model-train-speedometer.git"
   },
   "keywords": [
-    "UI",
-    "jQuery",
-    "Mobile",
-    "carousel",
-    "javascript"
+    "Arduino",
+    "Train",
+    "Modeltrain"
   ],
   "author": {
     "name": "Maarten Baijs",

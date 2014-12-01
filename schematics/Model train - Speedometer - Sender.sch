@@ -9067,7 +9067,7 @@ grid 5,08 x 5,08 mm</description>
 </class>
 </classes>
 <parts>
-<part name="ARDUINO" library="Arduino-AVR" deviceset="ATMEGA168-PU" device=""/>
+<part name="AVR" library="Arduino-AVR" deviceset="ATMEGA168-PU" device=""/>
 <part name="FRAME2" library="frames" deviceset="LETTER_L" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1 uF"/>
 <part name="U$2" library="JeeParts" deviceset="RFM12B" device=""/>
@@ -9095,7 +9095,7 @@ grid 5,08 x 5,08 mm</description>
 <plain>
 </plain>
 <instances>
-<instance part="ARDUINO" gate="1" x="63.5" y="83.82" smashed="yes">
+<instance part="AVR" gate="1" x="63.5" y="83.82" smashed="yes">
 <attribute name="NAME" x="38.1" y="116.84" size="1.778" layer="95" rot="MR180"/>
 <attribute name="VALUE" x="38.1" y="48.26" size="1.778" layer="96"/>
 </instance>
@@ -9127,7 +9127,7 @@ grid 5,08 x 5,08 mm</description>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_2"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_2"/>
 <wire x1="93.98" y1="83.82" x2="116.84" y2="83.82" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="IRQ"/>
 <wire x1="124.46" y1="50.8" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
@@ -9136,7 +9136,7 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_10(PWM)"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_10(PWM)"/>
 <wire x1="93.98" y1="60.96" x2="99.06" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="60.96" x2="99.06" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SEL"/>
@@ -9145,7 +9145,7 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_13"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_13"/>
 <wire x1="93.98" y1="53.34" x2="101.6" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="53.34" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="SCK"/>
@@ -9154,34 +9154,34 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_11(PWM)"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_11(PWM)"/>
 <pinref part="U$2" gate="G$1" pin="SDI"/>
 <wire x1="93.98" y1="58.42" x2="124.46" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_12"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_12"/>
 <pinref part="U$2" gate="G$1" pin="SDO"/>
 <wire x1="93.98" y1="55.88" x2="124.46" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="ANALOG_REFERENCE"/>
+<pinref part="AVR" gate="1" pin="ANALOG_REFERENCE"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$9" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_4"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_4"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="160.02" y1="78.74" x2="93.98" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_0(RX)"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_0(RX)"/>
 <wire x1="93.98" y1="88.9" x2="99.06" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="88.9" x2="99.06" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="PINS" gate="G$1" pin="2"/>
@@ -9190,7 +9190,7 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_1(TX)"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_1(TX)"/>
 <wire x1="93.98" y1="86.36" x2="101.6" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="PINS" gate="G$1" pin="3"/>
 <wire x1="220.98" y1="170.18" x2="101.6" y2="170.18" width="0.1524" layer="91"/>
@@ -9199,7 +9199,7 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="RESET"/>
+<pinref part="AVR" gate="1" pin="RESET"/>
 <wire x1="33.02" y1="111.76" x2="33.02" y2="175.26" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9213,14 +9213,14 @@ grid 5,08 x 5,08 mm</description>
 <net name="N$6" class="0">
 <segment>
 <pinref part="Y2" gate="G$1" pin="1"/>
-<pinref part="ARDUINO" gate="1" pin="CRYSTAL1"/>
+<pinref part="AVR" gate="1" pin="CRYSTAL1"/>
 <wire x1="27.94" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="Y2" gate="G$1" pin="3"/>
-<pinref part="ARDUINO" gate="1" pin="CRYSTAL2"/>
+<pinref part="AVR" gate="1" pin="CRYSTAL2"/>
 <wire x1="27.94" y1="91.44" x2="33.02" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -9279,8 +9279,8 @@ grid 5,08 x 5,08 mm</description>
 <junction x="165.1" y="137.16"/>
 <junction x="175.26" y="137.16"/>
 <junction x="182.88" y="137.16"/>
-<pinref part="ARDUINO" gate="1" pin="GND"/>
-<pinref part="ARDUINO" gate="1" pin="GND/ANALOG"/>
+<pinref part="AVR" gate="1" pin="GND"/>
+<pinref part="AVR" gate="1" pin="GND/ANALOG"/>
 <wire x1="25.4" y1="60.96" x2="33.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="60.96" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="55.88" x2="33.02" y2="55.88" width="0.1524" layer="91"/>
@@ -9385,7 +9385,7 @@ grid 5,08 x 5,08 mm</description>
 <net name="N$22" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="ARDUINO" gate="1" pin="DIGITAL_3(PWM)"/>
+<pinref part="AVR" gate="1" pin="DIGITAL_3(PWM)"/>
 <wire x1="93.98" y1="81.28" x2="109.22" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="81.28" x2="109.22" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="106.68" x2="154.94" y2="106.68" width="0.1524" layer="91"/>
@@ -9398,9 +9398,9 @@ grid 5,08 x 5,08 mm</description>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="ARDUINO" gate="1" pin="VCC"/>
+<pinref part="AVR" gate="1" pin="VCC"/>
 <wire x1="33.02" y1="83.82" x2="25.4" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="ARDUINO" gate="1" pin="VCC/ANALOG"/>
+<pinref part="AVR" gate="1" pin="VCC/ANALOG"/>
 <wire x1="33.02" y1="76.2" x2="25.4" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="76.2" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="81.28" x2="25.4" y2="83.82" width="0.1524" layer="91"/>

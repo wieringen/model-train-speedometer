@@ -12,7 +12,6 @@
 #include <JeeLib.h>
 #include <PortsLCD.h>
 
-LiquidCrystal lcd(6, 5, 3, 7, 8, 9);
 const int LCD_COLUMNS = 16;
 const int LCD_ROWS = 2;
 
@@ -24,21 +23,19 @@ const char *LCD_LINE_CONNECTING = "Connecting...   ";
 const int RF12B_NETWORK = 33;
 const int RF12B_NODE_ID = 1;
 
+const int UNIT_SWITCH_PIN = A5;
+
+LiquidCrystal lcd(6, 5, 3, 7, 8, 9);
+
 Port led_receiving_data (1);
 
 MilliTimer timer_receiving_data_freq;
 
-typedef struct
-{
+struct train_data {
     float kmh;
     float mph;
     float wheel_revisions;
-
-} Train_data;
-
-Train_data train_data;
-
-const int UNIT_SWITCH_PIN = A5;
+};
 
 void setup ()
 {
@@ -75,10 +72,8 @@ void setup ()
     lcd.println(LCD_LINE_CONNECTING);
 }
 
-void loop ()
-{
-    if (rf12_recvDone() && rf12_crc == 0)
-    {
+void loop () {
+    if (rf12_recvDone() && rf12_crc == 0) {
         //Serial.print("Recieving");
 
         // Since we are receiving data we can reset the data timer to 0.

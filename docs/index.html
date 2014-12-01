@@ -6,14 +6,14 @@
         <meta charset="utf-8">
         <meta name="robots" content="all" />
         <meta name="resource-type" content="document" />
-        <meta name="description" content="Tiny Carousel is a lightweight jQuery carousel for sliding html based content." />
-        <meta name="keywords" content="lightweight, jQuery, plugin, carousel, javascript, tinycarousel, Tiny Carousel, web 2.0" />
+        <meta name="description" content="A Arduino based project that measures and displays a model train's scaled speed." />
+        <meta name="keywords" content="Märklin, Marklin, Fleischmann, Lima, Pico, Arduino" />
         <meta name="author" content="Maarten baijs" />
-        <meta name="copyright" content="" />
+        <meta name="copyright" content="Maarten baijs" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
 
         <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../node_modules/baijs/css/website.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="css/tinycarousel.css" type="text/css" media="screen"/>
 
         <!--[if lte IE 8]>
             <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
@@ -29,9 +29,6 @@
 
         <!-- Add jQuery library -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
-        <!-- Add tinycarousel JS -->
-        <script type="text/javascript" src="js/jquery.tinycarousel.js"></script>
 
         <!-- Next files are only for this website! -->
         <script type="text/javascript" src="../node_modules/baijs/js/prettify.js"></script>
@@ -74,7 +71,7 @@
             <section class="block">
                 <!-- google_ad_section_start -->
                 <h2>What is it?</h2>
-                <p>Ever wanted to be able to see the real life speed of your model train?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly.</p>
+                <p>Ever wanted to be able to see the real life speed of your model train?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly. We used a Märklin H0 model train as a example.</p>
                 <!-- google_ad_section_end -->
 
                 <!-- AddThis Button BEGIN -->
@@ -91,8 +88,8 @@
             <section class="block">
                 <h2>Features</h2>
                 <ul class="list">
-                    <li>Can display imperial or metric units.</li>
-                    <li>Works with all brands or scales.</li>
+                    <li>Can display imperial and metric units.</li>
+                    <li>Works with all brands or scales (Marklin, Fleischmann, Lima, Pico etc)</li>
                     <li><a href="https://github.com/wieringen/modeltrain-speedmeter">Source is on GitHub</a></li>
                 </ul>
             </section>
@@ -117,13 +114,21 @@
             </section>
 
             <section class="block">
-                <h2>Parts</h2>
+                <h2>Parts list</h2>
                 <strong>Receiver</strong>
                 <ul class="list">
                     <li>ATMEGA328-PU or similar with a arduino bootloader.</li>
                     <li>RF12B transceiver</li>
+                    <li>2 resistors of 10k</li>
+                    <li>1 resistor of 0.27k</li>
+                    <li>2 resistors of 5k</li>
+                    <li>5 capacitors of 0.1uF</li>
+                    <li>1 capacitor of 10uF</li>
+                    <li>1 capacitor of 470uF</li>
                     <li>16mhz resonator</li>
                     <li>Diode</li>
+                    <li>7805L regulator</li>
+                    <li>MCP1702-33 positive voltage regulator </li>
                     <li>LCD with HD44780 or similar controller</li>
                 </ul>
 
@@ -132,17 +137,18 @@
                     <li>ATMEGA328-PU or similar with a arduino bootloader.</li>
                     <li>RF12B transceiver</li>
                     <li>2 resistors of 10k</li>
-                    <li>resistor of 0.27k</li>
+                    <li>1 resistor of 0.27k</li>
                     <li>5 capacitors of 0.1uF</li>
                     <li>1 capacitor of 10uF</li>
                     <li>1 capacitor of 470uF</li>
                     <li>16mhz resonator</li>
-                    <li>7805L</li>
-                    <li>MCP1702-33</li>
+                    <li>7805L regulator</li>
+                    <li>MCP1702-33 positive voltage regulator</li>
                     <li>Diode</li>
                     <li>HAL sensor(A1202UA)</li>
                     <li>Tiny magnet</li>
                     <li>A train car with enough room inside to hold everything.</li>
+                    <li>Drag contact to power the sender</li>
                 </ul>
 
             <section class="block">
@@ -150,7 +156,7 @@
 
                 <strong>Receiver</strong>
                 <p><a href="Model train - Speedometer - Receiver.sch">Eagle file</a></p>
-                <p><a href="images/sender.png"><img width="458" src="images/sender.png" /></a></p>
+                <p><a href="images/receiver.png"><img width="458" src="images/receiver.png" /></a></p>
 
                 <strong>Sender</strong>
                 <p><a href="Model train - Speedometer - Sender.sch">Eagle file</a></p>
@@ -158,16 +164,39 @@
 
             </section>
 
+            <section class="block advert">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Responsive -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-6364750078473156"
+                     data-ad-slot="7734741654"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </section>
+
             <section class="block">
                 <h2>Code</h2>
 
                 <p>You will need to install the <a href="http://jeelabs.net/projects/jeelib/wiki">JeeLib</a> library. The schemes below depend on it.</p>
+
+                <ul class="list">
+                <li>Download the ZIP file from <a href="https://github.com/jcw/jeelib/archive/master.zip">github</a></li>
+                <li>From the Arduino IDE: Sketch -> Import Library... -> Add Library...</li>
+                <li>Restart the Arduino IDE</li>
+                </ul>
+
+                <p>Now you can open the examples below in your <a href="http://arduino.cc/en/main/software#toc1">Arduino IDE</a>.</p>
 
                 <strong>Receiver</strong>
                 <p><a href="Receiver.ino">Arduino file</a></p>
 
                 <strong>Sender</strong>
                 <p><a href="Sender.ino">Arduino file</a></p>
+
+                <p>Currently the code is setup to work with Marklin H0 as a default. If you want to make this work with your brand or scale you will need to edit the Sender.ino file in 2 locations. In the top of this file you see 2 constants defined as MODEL_SCALE_MM and WHEEL_DIAMETER_MM. The first constant is the scale of your model and the second is the diamater of the wheel. Change these values to reflect your model.</p>
             </section>
         </article>
 
@@ -191,7 +220,6 @@
                     <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" src="https://www.paypal.com/nl_NL/i/scr/pixel.gif" width="1" height="1" />
                 </form></p>
-                <p>The latest source is available on <a href="https://github.com/wieringen/tinycarousel">GitHub</a>.</p>
             </section>
 
             <section class="block">
@@ -211,7 +239,7 @@
             </section>
         </aside>
 
-        <footer id="footer">&copy; <a href="/">Maarten Baijs</a> 2009-2014</footer>
+        <footer id="footer">&copy; <a href="/">Maarten Baijs</a> 2009-2015</footer>
     </div>
 
     <script type="text/javascript">
