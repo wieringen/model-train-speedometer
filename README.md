@@ -1,5 +1,4 @@
 [Model Train Speedometer](http://baijs.com/model-train-speedometer)
-
 ==================================================
 
 What you need to build your own version of model-train-speedometer
