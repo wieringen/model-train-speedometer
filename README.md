@@ -11,7 +11,7 @@ In order to build model-train-speedometer, you need to have Node.js/npm, and git
 How to build your own model-train-speedometer
 ----------------------------
 
-First, clone a copy of the main imageCreator git repo by running:
+First, clone a copy of the main model-train-speedometer git repo by running:
 
 ```bash
 git clone git://github.com/wieringen/model-train-speedometer.git
