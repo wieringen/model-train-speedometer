@@ -80,7 +80,7 @@ void loop () {
         //
         timer_receiving_data_freq.set(0);
 
-        // Copies the rf12data to the inData var.
+        // Copies the rf12data to the train_data var.
         //
         memcpy(&train_data, (byte*) rf12_data, sizeof train_data);
 

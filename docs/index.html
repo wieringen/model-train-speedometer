@@ -10,7 +10,7 @@
         <meta name="keywords" content="Märklin, Marklin, Fleischmann, Lima, Pico, Arduino" />
         <meta name="author" content="Maarten baijs" />
         <meta name="copyright" content="Maarten baijs" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
 
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="../node_modules/baijs/css/website.css" type="text/css" media="screen"/>
@@ -39,15 +39,17 @@
     <body>
 
     <div id="wrapper">
-
         <header id="header">
             <h1>Model Train Speedometer</h1>
             <span class="slogan">A Arduino based project that measures and displays a model train's scaled speed.</span>
 
-            <a href="model-train-speedometer-@@bnr@@.zip" class="btn-download">Download v@@bnr@@</a>
+            <section class="download">
+                <a href="model-train-speedometer-@@bnr@@.zip" class="btn">Download v@@bnr@@</a>
+                <p>The latest source is available on <a href="https://github.com/wieringen/model-train-speedometer">GitHub</a>.</p>
+            </section>
         </header>
 
-        <nav id="menu">
+        <nav id="menu-primary" class="menu">
             <ul class="block-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="../tinycarousel">Tiny Carousel</a></li>
@@ -63,6 +65,7 @@
                 <option value="../tinyscrollbar">Tiny Scrollbar</option>
                 <option value="../tinycircleslider">Tiny Circleslider</option>
                 <option value="../tinycolorpicker">Tiny Colorpicker</option>
+                <option value="../model-train-speedometer">Model Train Speedometer</option>
             </select>
         </nav>
 
@@ -71,7 +74,7 @@
             <section class="block">
                 <!-- google_ad_section_start -->
                 <h2>What is it?</h2>
-                <p>Ever wanted to be able to see the real life speed of your model train for free?  Now you can! This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly. Together they form a easy to use speedmeter. We used a Märklin H0 model train as a example.</p>
+                <p>Ever wanted to know the real speed of your model train? This project consists of 2 modules the receiver and the sender. Both are based on the ATMEGA microcontroller with arduino bootloader and use the RF12B transceiver to communicate wirelessly. Together they form a easy to use speedmeter. We used a Märklin H0 model train as a example.</p>
                 <!-- google_ad_section_end -->
 
                 <!-- AddThis Button BEGIN -->
@@ -89,8 +92,10 @@
                 <h2>Features</h2>
                 <ul class="list">
                     <li>Can display imperial and metric units.</li>
+                    <li>Relatively cheap to make.</li>
+                    <li>Wireless</li>
                     <li>Works with all brands or scales (Marklin, Fleischmann, Lima, Pico etc)</li>
-                    <li><a href="https://github.com/wieringen/modeltrain-speedmeter">Source is on GitHub</a></li>
+                    <li><a href="https://github.com/wieringen/model-train-speedometer">Source is on GitHub</a></li>
                 </ul>
             </section>
             <!-- google_ad_section_end -->
@@ -127,9 +132,12 @@
                     <li>1 capacitor of 470uF</li>
                     <li>16mhz resonator</li>
                     <li>Diode</li>
+                    <li>A 6 pin header to connect it to your fdti cable or breakout board.</li>
+                    <li>1 LED (Will be lit when circuit has power)</li>
+                    <li>1 LED (Flashes when receiving data)</li>
                     <li>7805L regulator</li>
                     <li>MCP1702-33 positive voltage regulator </li>
-                    <li>LCD with HD44780 or similar controller</li>
+                    <li>LCD with HD44780 or similar controller.</li>
                 </ul>
 
                 <strong>Sender</strong>
@@ -141,26 +149,30 @@
                     <li>5 capacitors of 0.1uF</li>
                     <li>1 capacitor of 10uF</li>
                     <li>1 capacitor of 470uF</li>
+                    <li>1 LED (Will be lit when circuit has power)</li>
+                    <li>1 LED (Flashes when sending data)</li>
                     <li>16mhz resonator</li>
                     <li>7805L regulator</li>
+                    <li>A 6 pin header to connect it to your fdti cable or breakout board.</li>
                     <li>MCP1702-33 positive voltage regulator</li>
                     <li>Diode</li>
                     <li>HAL sensor(A1202UA)</li>
                     <li>Tiny magnet</li>
                     <li>A train car with enough room inside to hold everything.</li>
-                    <li>Drag contact to power the sender</li>
+                    <li>Drag contact to power the sender.</li>
                 </ul>
+            </section>
 
             <section class="block">
                 <h2>Schematics</h2>
 
                 <strong>Receiver</strong>
                 <p><a href="../schematics/receiver.sch">Eagle file</a></p>
-                <p><a href="../schematics/receiver.png"><img width="458" src="../schematics/receiver.png" /></a></p>
+                <p><a href="../schematics/receiver.png"><img class="img-responsive" width="458" src="../schematics/receiver.png" /></a></p>
 
-                <strong>Sender</strong>x
+                <strong>Sender</strong>
                 <p><a href="../schematics/sender.sch">Eagle file</a></p>
-                <a href="../schematics/sender.png"><img width="458" src="../schematics/sender.png" /></a>
+                <a href="../schematics/sender.png"><img class="img-responsive" width="458" src="../schematics/sender.png" /></a>
             </section>
 
             <section class="block advert">
@@ -178,8 +190,7 @@
 
             <section class="block">
                 <h2>Code</h2>
-
-                <p>You will need to install the <a href="http://jeelabs.net/projects/jeelib/wiki">JeeLib</a> library. The schemes below depend on it.</p>
+                <p>You will need to install the <a href="http://jeelabs.net/projects/jeelib/wiki">JeeLib</a> library. The schemes below depends on it.</p>
 
                 <ul class="list">
                 <li>Download the ZIP file from <a href="https://github.com/jcw/jeelib/archive/master.zip">github</a></li>
@@ -195,7 +206,7 @@
                 <strong>Sender scheme</strong>
                 <p><a href="../schemes/Sender/Sender.ino">Arduino file</a></p>
 
-                <p>Currently the code is setup to work with Marklin H0 as a default. If you want to make this work with your brand or scale you will need to edit the Sender.ino file in 2 locations. In the top of this file you see 2 constants defined as MODEL_SCALE_MM and WHEEL_DIAMETER_MM. The first constant is the scale of your model and the second is the diamater of the wheel. Change these values to reflect your model.</p>
+                <p>Currently the code is setup to work with Marklin H0 as a default. If you want to make this work with your brand or scale you will need to edit the Sender.ino file in 2 locations. In the top of this file you see 2 constants defined as MODEL_SCALE_MM and WHEEL_DIAMETER_MM. The first constant is the scale of your model and the second is the diamater of the wheel. Change these values inside Sender.ino to reflect your model.</p>
 
                 <pre class="prettyprint"><code>
 // Currently set to Marklin H0 scale 1=87.
@@ -203,7 +214,6 @@
 const float MODEL_SCALE_MM = 87;
 const float WHEEL_DIAMETER_MM = 11.9;
                 </code></pre>
-
             </section>
         </article>
 
@@ -218,7 +228,17 @@ const float WHEEL_DIAMETER_MM = 11.9;
             </section>
 
             <section class="block">
-                <h2>License / Source</h2>
+                <h2>Other projects</h2>
+
+                <nav id="menu-secondary" class="menu">
+                    <ul class="block-menu">
+                        <li><a href="../model-train-speedometer" class="active">Model Train Speedometer</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section class="block">
+                <h2>License</h2>
 
                 <p>The schemes and diagrams here are free and open source. They are licensed under the MIT license. However a donation for our labor of love is greatly appreciated :) </p>
                 <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="beer">
@@ -227,23 +247,6 @@ const float WHEEL_DIAMETER_MM = 11.9;
                     <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!">
                     <img alt="" src="https://www.paypal.com/nl_NL/i/scr/pixel.gif" width="1" height="1" />
                 </form></p>
-                <p>The latest source is available on <a href="https://github.com/wieringen/model-train-speedometer">GitHub</a>.</p>
-            </section>
-
-            <section class="block">
-                <h2>Other projects</h2>
-
-                <nav id="menu-secondary" class="menu">
-                    <ul class="block-menu">
-                        <li><a href="../model-train-speedometer" class="active">Model Train Speedometer</a></li>
-                    </ul>
-
-                    <select>
-                        <option value="" selected="selected">Go to..</option>
-                        <option value="/">Home</option>
-                        <option value="../model-train-speedometer">Model Train Speedometer</option>
-                    </select>
-                </nav>
             </section>
         </aside>
 
